@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priceoye</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.svg" alt="Priceoye Logo">
+            </div>
+            <div class="search-bar">
+                <input type="search" placeholder="Search..." id="search">
+                <button class="search-btn"><img src="images/search.png" alt="search"></button>
+            </div>
+            <div class="auth-buttons">
+                <button class="login-btn" id="loginBtn">Log In</button>
+            </div>
+            
+
+            <img type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="product/images/new-product.png" alt="User dropdown" id="userImage" >
+
+            <!-- Dropdown menu -->
+            <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                  <div id="userName">Ahmed Nawaz Gondal</div>
+                  <div class="font-medium truncate" id="userEmail">ahmed@gmail.com</div>
+                </div>
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+                  <li>
+                    <a href="index.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                  </li>
+                  <li>
+                    <a href="/My Product/index.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My Product</a>
+                  </li>
+                  <li>
+                    <a href="product/index.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Add Product</a>
+                  </li>
+                  <li id="cartnumber">
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cart</a>
+                  </li>
+                </ul>
+                <div class="py-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" id="logoutBtn" >Sign out</a>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+    <div class="categories">
+        <div class="category-item">
+            <img src="images/mobiles.svg" alt="Mobiles Category">
+            <span>Mobiles</span>
+        </div>
+        <div class="category-item">
+            <img src="images/wireless-earbuds.svg" alt="Wireless Earbuds Category">
+            <span>Wireless Earbuds</span>
+        </div>
+        <div class="category-item">
+            <img src="images/smart-watches.svg" alt="Smart Watches Category">
+            <span>Smart Watches</span>
+        </div>
+        <div class="category-item">
+            <img src="images/tablets.svg" alt="Tablets Category">
+            <span>Tablets</span>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1" checked>
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+            <input type="radio" name="radio-btn" id="radio6">
+            <div class="slide first">
+                <img src="images/slider 1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="images/slider 2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="images/slider 3.jpg" alt="Slide 3">
+            </div>
+            <div class="slide">
+                <img src="images/slider 4.jpg" alt="Slide 4">
+            </div>
+            <div class="slide">
+                <img src="images/slider 5.jpg" alt="Slide 5">
+            </div>
+            <div class="slide">
+                <img src="images/slider 6.jpg" alt="Slide 6">
+            </div>
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+            <label for="radio6" class="manual-btn"></label>
+        </div>
+    </div>
+    <section class="product-grid" id="product_container">
+        <!-- <div class="product-card">
+            <h2>Smart Watches</h2>
+            <img src="images/smart-watches.svg">
+            <h3>Ultra Smart Watches</h3>
+            <div class="add">
+                <p class="price">Rs 2990</p>
+                 <button>Add to Cart</button>
+            </div>
+        </div> -->
+    </section>
+    <footer>
+        <p>&copy; 2024 Priceoye. All rights reserved.</p>
+    </footer>
+    <script>
+        let counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 6){
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+    <script type="module" src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://kit.fontawesome.com/b7b6261a6c.js" crossorigin="anonymous"></script>
+</body>
+</html>

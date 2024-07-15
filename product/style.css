@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2196F3;
+    color: #c4c3ca;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.section {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #2a2b38;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h4 {
+    font-weight: 600;
+    color: #ffeba7;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-style {
+    width: 100%;
+    padding: 12px 16px;
+    padding-left: 48px;
+    height: 48px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: #1f2029;
+    color: #c4c3ca;
+    box-shadow: 0 4px 8px rgba(21, 21, 21, 0.2);
+    transition: all 0.2s ease;
+}
+
+.form-style:focus {
+    box-shadow: 0 4px 8px rgba(21, 21, 21, 0.2);
+}
+
+.input-icon {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 24px;
+    color: #ffeba7;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffeba7;
+    color: #102770;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    box-shadow: 0 8px 24px rgba(255, 235, 167, 0.2);
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #102770;
+    color: #ffeba7;
+    box-shadow: 0 8px 24px rgba(16, 39, 112, 0.2);
+}
+
+.form-group input::placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.form-group input:focus::placeholder {
+    opacity: 0;
+}
