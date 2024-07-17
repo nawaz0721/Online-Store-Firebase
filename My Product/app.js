@@ -41,7 +41,7 @@ onAuthStateChanged(auth, (user) => {
       console.log(user);
     loginBtn.style.display = 'none';
     userImage.style.display = 'block';
-    getUserInfo(uid);
+    // getUserInfo(uid);
     getMyProduct(user.uid);
       } else {
         // User is signed out
@@ -57,18 +57,18 @@ loginBtn.addEventListener('click', ()=>{
 })
 
 
-function getUserInfo(uid){
-    const userRef = getDocs(db, 'users', uid);
-    getDoc(userRef)
-    .then((data) => {
-        console.log(data);
-        console.log(data.id);
-        console.log(data.data());
-        })
-        .catch((error) => {
-            console.log(error.message);
-    })
-}
+// function getUserInfo(uid){
+//     const userRef = getDocs(db, 'users', uid);
+//     getDoc(userRef)
+//     .then((data) => {
+//         console.log(data);
+//         console.log(data.id);
+//         // console.log(data.data());
+//         })
+//         .catch((error) => {
+//             console.log(error.message);
+//     })
+// }
 
 async function getMyProduct(uid){
     try{

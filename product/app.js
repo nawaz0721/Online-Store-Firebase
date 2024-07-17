@@ -19,6 +19,8 @@ const productPrice = document.getElementById('productPrice');
 const add = document.getElementById('add');
 
 add.addEventListener('click', (e)=>{
+    add.disabled = true;
+    add.innerHTML = "Adding";
     e.preventDefault();
     const productCategoryValue = productCategory.value;
     const productImageValue = productImage.files[0];
@@ -51,6 +53,8 @@ add.addEventListener('click', (e)=>{
                     addDoc(productCollection, product)
                     .then(()=>{
                         console.log("Product Added");
+                        add.disabled = false;
+                        add.innerHTML = "Add";
                         window.location.href="/";
                         })
                     .catch((error) => {
